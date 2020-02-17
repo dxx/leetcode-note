@@ -1,8 +1,6 @@
-package com.mcx;
+package com.mcx.twonumaddition;
 
 /**
- * Created by mcx on 2020-06-29.
- *
  * 两数相加
  * 给出两个 **非空** 的链表用来表示两个非负的整数。其中，它们
  * 各自的位数是按照 **逆序** 的方式存储的，并且它们的每个节点
@@ -23,7 +21,8 @@ package com.mcx;
  * 输出: 7 -> 0 -> 1
  * 原因: 42 + 65 = 107
  */
-public class TwoNumAddition {
+public class Main {
+
     /**
      * 单链表
      */
