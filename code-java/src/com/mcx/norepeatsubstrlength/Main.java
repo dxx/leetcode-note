@@ -1,11 +1,9 @@
-package com.mcx;
+package com.mcx.norepeatsubstrlength;
 
 import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by mcx on 2020-06-30.
- *
  * 无重复字符的最长子串
  * 给定一个字符串，找出其中不含有重复字符的 **最长子串** 和 **长度**。
  *
@@ -23,7 +21,7 @@ import java.util.Set;
  * 解释: 无重复字符的最长子串是 "wke"，其长度为 3。
  *      请注意，你的答案必须是 子串 的长度，"pwke" 是一个子序列，不是子串。
  */
-public class NoRepeatSubstrLength {
+public class Main {
 
     public static String longestSubstring(String s) {
         // 记录重复字符
