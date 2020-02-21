@@ -1,8 +1,6 @@
-package com.mcx;
+package com.mcx.numreverse;
 
 /**
- * Created by mcx on 2020-06-29.
- *
  * 整数反转
  * 给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。
  * 假设我们的环境只能存储得下 32 位的有符号整数，则其数值范围为 [−2^31, 2^31 − 1]。
@@ -18,7 +16,7 @@ package com.mcx;
  * 输入: 120
  * 输出: 21
  */
-public class NumReverse {
+public class Main {
 
     public static int reverse(int num) {
         int reverseNum = 0;
