@@ -20,7 +20,7 @@ import java.util.List;
  * ]
  */
 public class Main {
-    
+
     public static List<List<Integer>> fourSum(int[] nums, int target) {
         List<List<Integer>> res = new ArrayList<>();
 
