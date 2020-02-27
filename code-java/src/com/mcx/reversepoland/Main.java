@@ -1,7 +1,5 @@
 package com.mcx.reversepoland;
 
-import com.mcx.ReversePoland;
-
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -57,9 +55,9 @@ public class Main {
 
     public static class Operation {
         private final String opt;
-        private final ReversePoland.Cal cal;
+        private final Cal cal;
 
-        public Operation(String opt, ReversePoland.Cal cal) {
+        public Operation(String opt, Cal cal) {
             this.opt = opt;
             this.cal = cal;
         }
@@ -68,7 +66,7 @@ public class Main {
             return opt;
         }
 
-        public ReversePoland.Cal getCal() {
+        public Cal getCal() {
             return cal;
         }
     }
