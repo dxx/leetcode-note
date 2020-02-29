@@ -1,7 +1,5 @@
 package com.mcx.nqueen;
 
-import com.mcx.NQueen2;
-
 /**
  * N 皇后 II
  * n 皇后问题研究的是如何将 n 个皇后放置在 n×n 的棋盘上，并且使皇后彼此之间不能相互攻击。
@@ -24,7 +22,7 @@ import com.mcx.NQueen2;
  *   ".Q.."]
  * ]
  */
-public class Main2 {
+public class NQueen2 {
 
     private int[] positions; // 记录每一次摆放的位置。下标表示第几个皇后，对应的值表示第几列
     private int total; // 记录解决方案的数量

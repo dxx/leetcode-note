@@ -1,7 +1,5 @@
 package com.mcx.nqueen;
 
-import com.mcx.NQueen;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -27,7 +25,7 @@ import java.util.List;
  * ]
  * 解释: 4 皇后问题存在两个不同的解法。
  */
-public class Main {
+public class NQueen {
 
     private int[] positions; // 记录每一次摆放的位置。下标表示第几个皇后，对应的值表示第几列
     private List<List<String>> outputs; // 保存输出的结果
