@@ -21,7 +21,7 @@ package com.mcx.uniquepaths;
  * 1. 向右 -> 向右 -> 向下 -> 向下
  * 2. 向下 -> 向下 -> 向右 -> 向右
  */
-public class Main {
+public class Main2 {
 
     public static int uniquePathsWithObstacles(int[][] obstacleGrid) {
         if (obstacleGrid.length == 0) {
