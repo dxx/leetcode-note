@@ -1,7 +1,5 @@
 package com.mcx.binarytreepreordertraversal;
 
-import com.mcx.BinaryTreePreorderTraversal;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
