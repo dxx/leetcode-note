@@ -1,8 +1,6 @@
-package com.mcx;
+package com.mcx.insertionsortlist;
 
 /**
- * Created by mcx on 2020-08-26.
- *
  * 对链表进行插入排序
  * 从第一个元素开始，该链表可以被认为已经部分排序。每次迭代时，从输入数据中移除一个元素，并原地将其插入到已排好序的链表中。
  * 插入排序算法:
@@ -17,8 +15,8 @@ package com.mcx;
  * 输入: -1->5->3->4->0
  * 输出: -1->0->3->4->5
  */
-public class InsertionSortList {
-
+public class Main {
+    
     public static class ListNode {
         public int val;
         public ListNode next;
