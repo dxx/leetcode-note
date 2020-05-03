@@ -1,8 +1,6 @@
 package minimumwindowsubstring
 
-import (
-    "testing"
-)
+import "testing"
 
 func TestMinWindow(t *testing.T) {
     s := "ADOBECODEBANC"
