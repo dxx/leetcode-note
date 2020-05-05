@@ -1,7 +1,5 @@
 package norepeatsubstrlength
 
-import "fmt"
-
 // 无重复字符的最长子串
 // 给定一个字符串，找出其中不含有重复字符的 **最长子串** 和 **长度**。
 
@@ -46,18 +44,4 @@ func longestSubstring(s string) string {
         delete(strMap, s[i])
     }
     return maxSubstring
-}
-
-func main() {
-    str := "abcabcbb"
-    maxSubstring := longestSubstring(str)
-    fmt.Printf("字符串 %s 的无重复字符的最长子串是 %s 长度为 %d\n", str, maxSubstring, len(maxSubstring))
-
-    str = "bbbbb"
-    maxSubstring = longestSubstring(str)
-    fmt.Printf("字符串 %s 的无重复字符的最长子串是 %s 长度为 %d\n", str, maxSubstring, len(maxSubstring))
-
-    str = "pwwkew"
-    maxSubstring = longestSubstring(str)
-    fmt.Printf("字符串 %s 的无重复字符的最长子串是 %s 长度为 %d\n", str, maxSubstring, len(maxSubstring))
 }
