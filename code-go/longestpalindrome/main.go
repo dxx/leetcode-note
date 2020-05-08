@@ -1,8 +1,4 @@
-package main
-
-import (
-    "fmt"
-)
+package longestpalindrome
 
 // 最长回文子串
 // 给定一个字符串 s，找到 s 中最长的回文子串。假设 s 的最大长度为 1000。
@@ -69,14 +65,4 @@ func isPalindrome(s string) bool {
         }
     }
     return true
-}
-
-func main() {
-    str := "babad"
-    palindrome := longestPalindrome(str)
-    fmt.Println(palindrome)
-
-    str = "cbbd"
-    palindrome = longestPalindrome(str)
-    fmt.Println(palindrome)
 }
