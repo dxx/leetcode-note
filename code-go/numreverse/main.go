@@ -1,8 +1,4 @@
-package main
-
-import (
-    "fmt"
-)
+package numreverse
 
 // 整数反转
 // 给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。
@@ -41,22 +37,4 @@ func reverse(num int) int {
     }
 
     return int(reverseNum)
-}
-
-func main() {
-    num := 123
-    result := reverse(num)
-    fmt.Printf("%d\n", result)
-
-    num = -123
-    result = reverse(num)
-    fmt.Printf("%d\n", result)
-
-    num = 120
-    result = reverse(num)
-    fmt.Printf("%d\n", result)
-
-    num = 2147483647
-    result = reverse(num)
-    fmt.Printf("%d\n", result)
 }
