@@ -1,8 +1,6 @@
 package threesum
 
-import (
-    "testing"
-)
+import "testing"
 
 func TestThreeSum(t *testing.T) {
     nums := []int{-1, 0, 1, 2, -1, -4}
