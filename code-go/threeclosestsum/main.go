@@ -1,7 +1,6 @@
-package main
+package threeclosestsuom
 
 import (
-    "fmt"
     "math"
     "sort"
 )
@@ -68,13 +67,4 @@ func abs(a int) int {
         return a
     }
     return -a
-}
-
-func main() {
-    nums := []int{-1, 2, 1, -4}
-    target := 1
-    fmt.Printf("nums = %v, target = %v\n", nums, target)
-
-    sum := threeSumClosest(nums, target)
-    fmt.Println(sum)
 }
