@@ -1,7 +1,6 @@
-package main
+package foursum
 
 import (
-    "fmt"
     "math"
     "sort"
 )
@@ -107,13 +106,4 @@ func twoSum(nums []int, start, end, target int) [][]int {
         right--
     }
     return results
-}
-
-func main() {
-    nums := []int{1, 0, -1, 0, -2, 2}
-    target := 0
-    fmt.Printf("nums = %v, target = %v\n", nums, target)
-
-    sum := fourSum(nums, target)
-    fmt.Println(sum)
 }
