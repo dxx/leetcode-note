@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package validparentheses
 
 // 有效的括号
 // 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
@@ -58,36 +56,4 @@ func isValid(s string) bool {
     }
     // 所有的括号能配对, 栈就会为空
     return len(stack) == 0
-}
-
-func main() {
-    s := "()"
-    fmt.Println(s)
-
-    r := isValid(s)
-    fmt.Println(r)
-
-    s = "()[]{}"
-    fmt.Println(s)
-
-    r = isValid(s)
-    fmt.Println(r)
-
-    s = "(]"
-    fmt.Println(s)
-
-    r = isValid(s)
-    fmt.Println(r)
-
-    s = "([)]"
-    fmt.Println(s)
-
-    r = isValid(s)
-    fmt.Println(r)
-
-    s = "{[]}"
-    fmt.Println(s)
-
-    r = isValid(s)
-    fmt.Println(r)
 }
