@@ -1,7 +1,6 @@
-package main
+package nqueen2
 
 import (
-    "fmt"
     "math"
 )
 
@@ -76,11 +75,4 @@ func totalNQueens(n int) int {
     queen := NewQueen(n)
     queen.PutQueen(0)
     return queen.Total
-}
-
-func main() {
-    n := 4
-    total := totalNQueens(n)
-    fmt.Println(n)
-    fmt.Printf("%v\n", total)
 }
