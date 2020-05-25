@@ -1,7 +1,6 @@
-package main
+package nqueen
 
 import (
-    "fmt"
     "math"
     "strings"
 )
@@ -96,11 +95,4 @@ func solveNQueens(n int) [][]string {
     queen := NewQueen(n)
     queen.PutQueen(0)
     return queen.Outputs
-}
-
-func main() {
-    n := 4
-    outputs := solveNQueens(n)
-    fmt.Println(n)
-    fmt.Printf("%v\n", outputs)
 }
