@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package maximumsubarray
 
 // 最大子序和
 // 给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
@@ -29,12 +27,4 @@ func maxSubArray(nums []int) int {
         }
     }
     return maxValue
-}
-
-func main() {
-    nums := []int{-2, 1, -3, 4, -1, 2, 1, -5, 4}
-    fmt.Println(nums)
-
-    value := maxSubArray(nums)
-    fmt.Println(value)
 }

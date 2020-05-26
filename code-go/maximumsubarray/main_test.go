@@ -1,0 +1,11 @@
+package maximumsubarray
+
+import "testing"
+
+func TestMaxSubArray(t *testing.T) {
+    nums := []int{-2, 1, -3, 4, -1, 2, 1, -5, 4}
+    t.Log(nums)
+
+    value := maxSubArray(nums)
+    t.Log(value)
+}
