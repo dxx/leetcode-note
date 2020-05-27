@@ -1,7 +1,5 @@
 package uniquepaths
 
-import "fmt"
-
 // 不同路径
 // 一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为“Start” ）。
 // 机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为“Finish”）。
@@ -68,18 +66,4 @@ func uniquePaths(m int, n int) int {
     }
     // 返回最后的路径数目
     return paths[col - 1]
-}
-
-func main() {
-    m := 3
-    n := 2
-    fmt.Printf("m = %d, n = %d\n", m, n)
-    count := uniquePaths(m, n)
-    fmt.Println(count)
-
-    m = 7
-    n = 3
-    fmt.Printf("m = %d, n = %d\n", m, n)
-    count = uniquePaths(m, n)
-    fmt.Println(count)
 }
