@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package uniquepaths
 
 // 不同路径 II
 // 一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为“Start” ）。
@@ -52,14 +50,4 @@ func uniquePathsWithObstacles(obstacleGrid [][]int) int {
     }
     // 返回最后的路径数目
     return paths[col - 1]
-}
-
-func main() {
-    obstacleGrid := [][]int {
-        {0, 0, 0},
-        {0, 1, 0},
-        {0, 0, 0},
-    }
-    count := uniquePathsWithObstacles(obstacleGrid)
-    fmt.Println(count)
 }
