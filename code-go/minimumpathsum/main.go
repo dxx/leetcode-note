@@ -1,7 +1,6 @@
-package main
+package minimumpathsum
 
 import (
-    "fmt"
     "math"
 )
 
@@ -52,15 +51,4 @@ func minPathSum(grid [][]int) int {
     }
     // 返回最后一个点的最小路径
     return pathSums[row - 1][col - 1]
-}
-
-
-func main() {
-    grid := [][]int {
-        {1, 3, 1},
-        {1, 5, 1},
-        {4, 2, 1},
-    }
-    sum := minPathSum(grid)
-    fmt.Println(sum)
 }
