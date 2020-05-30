@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package sortcolors
 
 // 颜色分类
 
@@ -38,12 +36,4 @@ func sortColors(nums []int) {
             p1++
         }
     }
-}
-
-func main() {
-    nums := []int{2, 0, 2, 1, 1, 0}
-    fmt.Println(nums)
-
-    sortColors(nums)
-    fmt.Println(nums)
 }
