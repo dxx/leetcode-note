@@ -1,7 +1,6 @@
-package main
+package minimumwindowsubstring
 
 import (
-    "fmt"
     "math"
 )
 
@@ -64,12 +63,4 @@ func minWindow(s string, t string) string {
         return ""
     }
     return s[l:r]
-}
-
-func main() {
-    s := "ADOBECODEBANC"
-    t := "ABC"
-    r := minWindow(s, t)
-    fmt.Printf("s=%s, t=%s\n", s, t)
-    fmt.Println(r)
 }
