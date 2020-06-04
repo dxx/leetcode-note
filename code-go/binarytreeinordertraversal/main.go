@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package binarytreeinordertraversal
 
 // 二叉树的中序遍历
 // 给定一个二叉树，返回它的中序遍历。
@@ -81,16 +79,4 @@ func inorderRecursion(root *TreeNode) []int {
     // 最后访问右子节点
     nodes = append(nodes, inorderRecursion(root.Right)...)
     return nodes
-}
-
-func main() {
-    node1 := &TreeNode{Val: 1}
-    node2 := &TreeNode{Val: 2}
-    node3 := &TreeNode{Val: 3}
-    node1.Right = node2
-    node2.Left = node3
-
-    results := inorderTraversal(node1)
-
-    fmt.Println(results)
 }
