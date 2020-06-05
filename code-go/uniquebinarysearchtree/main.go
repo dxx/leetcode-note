@@ -1,4 +1,4 @@
-package main
+package uniquebinarysearchtree
 
 import "fmt"
 
@@ -29,13 +29,13 @@ type TreeNode struct {
     Right *TreeNode
 }
 
-func prevOrder(node *TreeNode) {
+func preOrder(node *TreeNode) {
     if node == nil {
         return
     }
     fmt.Printf("%2d",node.Val)
-    prevOrder(node.Left)
-    prevOrder(node.Right)
+    preOrder(node.Left)
+    preOrder(node.Right)
 }
 
 func generateTrees(n int) []*TreeNode {
@@ -68,16 +68,4 @@ func generateSubTrees(start, end int) []*TreeNode {
         }
     }
     return treeNodes
-}
-
-func main() {
-    n := 3
-
-    fmt.Println(n)
-
-    trees := generateTrees(n)
-    for _, tree := range trees {
-        prevOrder(tree)
-        fmt.Println()
-    }
 }
