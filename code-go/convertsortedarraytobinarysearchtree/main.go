@@ -1,4 +1,4 @@
-package main
+package convertsortedarraytobinarysearchtree
 
 import "fmt"
 
@@ -48,14 +48,4 @@ func infixOrder(node *TreeNode) {
     infixOrder(node.Left)
     fmt.Println(node.Val)
     infixOrder(node.Right)
-}
-
-func main() {
-    nums := []int{-10, -3, 0, 5, 9}
-
-    fmt.Println(nums)
-
-    tree := sortedArrayToBST(nums)
-
-    infixOrder(tree)
 }
