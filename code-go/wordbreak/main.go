@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package wordbreak
 
 // 单词拆分
 // 给定一个非空字符串 s 和一个包含非空单词的列表 wordDict，判定 s 是否可以被空格拆分为一个或多个在字典中出现的单词。
@@ -45,27 +43,4 @@ func wordBreak(s string, wordDict []string) bool {
         }
     }
     return dp[sLen]
-}
-
-func main() {
-    s := "leetcode"
-    wordDict := []string{"leet", "code"}
-    fmt.Printf("s=%s, wordDict=%v\n", s, wordDict)
-
-    result := wordBreak(s, wordDict)
-    fmt.Println(result)
-
-    s = "applepenapple"
-    wordDict = []string{"apple", "pen"}
-    fmt.Printf("s=%s, wordDict=%v\n", s, wordDict)
-
-    result = wordBreak(s, wordDict)
-    fmt.Println(result)
-
-    s = "catsandog"
-    wordDict = []string{"cats", "dog", "sand", "and", "cat"}
-    fmt.Printf("s=%s, wordDict=%v\n", s, wordDict)
-
-    result = wordBreak(s, wordDict)
-    fmt.Println(result)
 }
