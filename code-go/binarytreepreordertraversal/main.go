@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package binarytreepreordertraversal
 
 // 二叉树的前序遍历
 // 给定一个二叉树，返回它的前序遍历。
@@ -68,16 +66,4 @@ func preorderRecursion(node *TreeNode) []int {
     // 最后访问右子节点
     nodes = append(nodes, preorderRecursion(node.Right)...)
     return nodes
-}
-
-func main() {
-    node1 := &TreeNode{Val: 1}
-    node2 := &TreeNode{Val: 2}
-    node3 := &TreeNode{Val: 3}
-    node1.Right = node2
-    node2.Left = node3
-
-    results := preorderTraversal(node1)
-
-    fmt.Println(results)
 }
