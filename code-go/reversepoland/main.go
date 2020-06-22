@@ -1,7 +1,6 @@
 package reversepoland
 
 import (
-    "fmt"
     "strconv"
 )
 
@@ -86,24 +85,4 @@ func evalRPN(tokens []string) int {
     }
     // 栈中最后一个元素就是最后的结果
     return numStacks[0]
-}
-
-func main() {
-    tokens := []string{"2", "1", "+", "3", "*"}
-    res := evalRPN(tokens)
-
-    fmt.Printf("%v\n", tokens)
-    fmt.Printf("%v\n", res)
-
-    tokens = []string{"4", "13", "5", "/", "+"}
-    res = evalRPN(tokens)
-
-    fmt.Printf("%v\n", tokens)
-    fmt.Printf("%v\n", res)
-
-    tokens = []string{"10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"}
-    res = evalRPN(tokens)
-
-    fmt.Printf("%v\n", tokens)
-    fmt.Printf("%v\n", res)
 }
