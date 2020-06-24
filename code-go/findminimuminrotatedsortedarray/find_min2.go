@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package findminimuminrotatedsortedarray
 
 // 寻找旋转排序数组中的最小值 II
 // 假设按照升序排序的数组在预先未知的某个点上进行了旋转。例如，数组 [0,1,2,4,5,6,7] 可能变为 [4,5,6,7,0,1,2],
@@ -32,18 +30,4 @@ func findMin2(nums []int) int {
         }
     }
     return nums[end]
-}
-
-func main() {
-    nums := []int{1, 3, 5}
-    min := findMin2(nums)
-
-    fmt.Println(nums)
-    fmt.Println(min)
-
-    nums = []int{2, 2, 2, 0, 1}
-    min = findMin2(nums)
-
-    fmt.Println(nums)
-    fmt.Println(min)
 }
