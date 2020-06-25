@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package twosum
 
 // 两数之和 II - 输入有序数组
 // 给定一个已按照 **升序排列** 的有序数组，找到两个数使得它们相加之和等于目标数。
@@ -38,13 +36,4 @@ func twoSum2(numbers []int, target int) []int {
     }
 
     return indexes
-}
-
-func main()  {
-    numbers := []int{2, 7, 11, 15}
-    target := 9
-    result := twoSum2(numbers, target)
-
-    fmt.Printf("numbers = %v, target = %d\n", numbers, target)
-    fmt.Println(result)
 }
