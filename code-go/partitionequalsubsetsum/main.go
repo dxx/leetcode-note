@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package partitionequalsubsetsum
 
 // 分割等和子集
 // 给定一个只包含正整数的非空数组。是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。
@@ -84,18 +82,4 @@ func max(a, b int) int {
         return a
     }
     return b
-}
-
-func main() {
-    nums := []int{1, 5, 11, 5}
-    fmt.Println(nums)
-
-    result := canPartition(nums)
-    fmt.Println(result)
-
-    nums = []int{1, 2, 3, 5}
-    fmt.Println(nums)
-
-    result = canPartition(nums)
-    fmt.Println(result)
 }
