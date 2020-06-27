@@ -1,16 +1,16 @@
 package convertsortedarraytobinarysearchtree
 
 import (
-	"fmt"
-	"testing"
+    "fmt"
+    "testing"
 )
 
 func TestSortedArrayToBST(t *testing.T) {
-	nums := []int{-10, -3, 0, 5, 9}
+    nums := []int{-10, -3, 0, 5, 9}
 
-	fmt.Println(nums)
+    fmt.Println(nums)
 
-	tree := sortedArrayToBST(nums)
+    tree := sortedArrayToBST(nums)
 
-	infixOrder(tree)
+    infixOrder(tree)
 }
