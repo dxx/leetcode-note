@@ -1,2 +1,3 @@
-# leetcode-note
-:memo: 力扣笔记
+# 力扣笔记
+
+记录力扣题目和代码题解，使用 Go 和 Java 实现。
