@@ -12,40 +12,40 @@ import "fmt"
 // 所以返回 [0, 1]
 
 func twoSum(nums []int, target int) []int {
-	var indexes []int
+    var indexes []int
 
-	// 时间复杂度 O((n^2-n)/2)
-	/*for i := 0; i < len(nums) - 1; i++ {
-		for j := i + 1; j < len(nums); j++ {
-			if nums[i] + nums[j] == target {
-				indexes = append(indexes, i, j)
-				break
-			}
-		}
-	}*/
+    // 时间复杂度 O((n^2-n)/2)
+    /*for i := 0; i < len(nums) - 1; i++ {
+        for j := i + 1; j < len(nums); j++ {
+            if nums[i] + nums[j] == target {
+                indexes = append(indexes, i, j)
+                break
+            }
+        }
+    }*/
 
-	// 时间复杂度 O(n)
-	numMap := make(map[int]int)
-	for i, v := range nums {
-		// 计算补数
-		n := target - v
-		numIndex, ok := numMap[n]
-		// 判断补数是否存在
-		if ok {
-			// 补数存在，将补数的小标和当前数的下标放入数组中
-			indexes = append(indexes, numIndex, i)
-			break
-		}
-		// 将当前元素放入 map 中，方便后续判断
-		numMap[v] = i
-	}
-	return indexes
+    // 时间复杂度 O(n)
+    numMap := make(map[int]int)
+    for i, v := range nums {
+        // 计算补数
+        n := target - v
+        numIndex, ok := numMap[n]
+        // 判断补数是否存在
+        if ok {
+            // 补数存在，将补数的小标和当前数的下标放入数组中
+            indexes = append(indexes, numIndex, i)
+            break
+        }
+        // 将当前元素放入 map 中，方便后续判断
+        numMap[v] = i
+    }
+    return indexes
 }
 
 func main()  {
-	nums := []int{2, 7, 11, 15}
-	target := 9
-	result := twoSum(nums, target)
+    nums := []int{2, 7, 11, 15}
+    target := 9
+    result := twoSum(nums, target)
 
-	fmt.Println(result)
+    fmt.Println(result)
 }
