@@ -45,7 +45,7 @@ public class NumReverse {
         int result = reverse(num);
         System.out.println(result);
 
-        num = -321;
+        num = -123;
         result = reverse(num);
         System.out.println(result);
 
