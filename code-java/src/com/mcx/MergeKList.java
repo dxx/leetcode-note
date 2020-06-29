@@ -69,8 +69,8 @@ public class MergeKList {
 
     // 合并
     private static ListNode merge(ListNode l1, ListNode l2) {
-        ListNode newListNode = null;
-        ListNode prevNewNode = null;
+        ListNode newListNode = new ListNode(0);
+        ListNode prevNewNode = newListNode;
         ListNode appendNode = null;
         ListNode node1 = l1;
         ListNode node2 = l2;
@@ -84,36 +84,24 @@ public class MergeKList {
                 // 右边当前链表节点后移
                 node2 = node2.next;
             }
-            // 判断是否添加第一个节点
-            if (prevNewNode == null) {
-                newListNode = appendNode;
-            } else {
-                // 将下一个节点添加到上一个节点的后面
-                prevNewNode.next = appendNode;
-            }
+
+            // 将下一个节点添加到上一个节点的后面
+            prevNewNode.next = appendNode;
             // 记录上一个节点
             prevNewNode = appendNode;
         }
 
         // 左边链表还有剩余节点，直接添加到末尾
         if (node1 != null) {
-            if (prevNewNode == null) {
-                newListNode = node1;
-            } else {
-                prevNewNode.next = node1;
-            }
+            prevNewNode.next = node1;
         }
 
         // 右边链表还有剩余节点，直接添加到末尾
         if (node2 != null) {
-            if (prevNewNode == null) {
-                newListNode = node2;
-            } else {
-                prevNewNode.next = node2;
-            }
+            prevNewNode.next = node2;
         }
 
-        return newListNode;
+        return newListNode.next;
     }
 
     public static void main(String[] args) {

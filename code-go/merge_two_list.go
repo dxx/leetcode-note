@@ -19,8 +19,8 @@ type ListNode struct {
 }
 
 func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
-    var prevNewNode *ListNode
-    var newListNode *ListNode
+    var newListNode = &ListNode{Val: 0}
+    var prevNewNode = newListNode
     var appendNode *ListNode
     node1 := l1
     node2 := l2
@@ -34,35 +34,23 @@ func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
             // 右边当前链表节点后移
             node2 = node2.Next
         }
-        // 判断是否添加第一个节点
-        if prevNewNode == nil {
-            newListNode = appendNode
-        } else {
-            // 将下一个节点添加到上一个节点的后面
-            prevNewNode.Next = appendNode
-        }
+
+        // 将下一个节点添加到上一个节点的后面
+        prevNewNode.Next = appendNode
         // 记录上一个节点
         prevNewNode = appendNode
     }
 
     // 左边链表还有剩余节点
     if node1 != nil {
-        if prevNewNode == nil {
-            newListNode = node1
-        } else {
-            prevNewNode.Next = node1
-        }
+        prevNewNode.Next = node1
     }
 
     // 右边链表还有剩余节点
     if node2 != nil {
-        if prevNewNode == nil {
-            newListNode = node2
-        } else {
-            prevNewNode.Next = node2
-        }
+        prevNewNode.Next = node2
     }
-    return newListNode
+    return newListNode.Next
 }
 
 // 打印链表

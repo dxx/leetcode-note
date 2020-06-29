@@ -27,8 +27,8 @@ public class MergeTwoList {
     }
 
     public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        ListNode newListNode = null;
-        ListNode prevNewNode = null;
+        ListNode newListNode = new ListNode(0);
+        ListNode prevNewNode = newListNode;
         ListNode appendNode = null;
         ListNode node1 = l1;
         ListNode node2 = l2;
@@ -37,47 +37,35 @@ public class MergeTwoList {
                 appendNode = node1;
                 // 左边当前链表节点后移
                 node1 = node1.next;
-            } else if (node1.val > node2.val) { // 判断左边链表节点是大于右边链表节点
+            } else { // 判断左边链表节点是大于右边链表节点
                 appendNode = node2;
                 // 右边当前链表节点后移
                 node2 = node2.next;
             }
-            // 判断是否添加第一个节点
-            if (prevNewNode == null) {
-                newListNode = appendNode;
-            } else {
-                // 将下一个节点添加到上一个节点的后面
-                prevNewNode.next = appendNode;
-            }
+
+            // 将下一个节点添加到上一个节点的后面
+            prevNewNode.next = appendNode;
             // 记录上一个节点
             prevNewNode = appendNode;
         }
 
         // 左边链表还有剩余节点，直接添加到末尾
         if (node1 != null) {
-            if (prevNewNode == null) {
-                newListNode = node1;
-            } else {
-                prevNewNode.next = node1;
-            }
+            prevNewNode.next = node1;
         }
 
         // 右边链表还有剩余节点，直接添加到末尾
         if (node2 != null) {
-            if (prevNewNode == null) {
-                newListNode = node2;
-            } else {
-                prevNewNode.next = node2;
-            }
+            prevNewNode.next = node2;
         }
 
-        return newListNode;
+        return newListNode.next;
     }
 
     private static void printListNode(ListNode node) {
         StringBuilder sb = new StringBuilder();
         while (node != null) {
-            sb.append(node.val + "->");
+            sb.append(node.val).append("->");
             node = node.next;
         }
         sb.deleteCharAt(sb.length() - 1);
