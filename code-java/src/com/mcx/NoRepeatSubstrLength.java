@@ -30,12 +30,18 @@ public class NoRepeatSubstrLength {
         Set<Character> strSet = new HashSet<>();
         // 最长无重复的子字符串
         String maxSubstring = "";
+        // 原字符串长度
+        int strLen = s.length();
         // 右下标
         int j = 0;
 
-        for (int i = 0; i < s.length(); i++) {
+        for (int i = 0; i < strLen; i++) {
+            if (j >= strLen) {
+                break;
+            }
+
             // 右下标不断后移，直到发现重复的字符
-            while (j < s.length() && !strSet.contains(s.charAt(j))) {
+            while (j < strLen && !strSet.contains(s.charAt(j))) {
                 strSet.add(s.charAt(j));
                 j++;
             }

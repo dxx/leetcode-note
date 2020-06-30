@@ -24,11 +24,17 @@ func longestSubstring(s string) string {
     strMap := map[byte]int{}
     // 最长无重复的子字符串
     maxSubstring := ""
+    // 原字符串长度
+    strLen := len(s)
     // 右下标
     j := 0
-    for i := 0; i < len(s); i++ {
+    for i := 0; i < strLen; i++ {
+        if j >= strLen {
+            break
+        }
+
         // 右下标不断后移，直到发现重复的字符
-        for j < len(s) && strMap[s[j]] == 0 {
+        for j < strLen && strMap[s[j]] == 0 {
             strMap[s[j]]++
             j++
         }
