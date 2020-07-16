@@ -46,7 +46,7 @@ func getKthElement(nums1 []int, nums2 []int, k int) int {
     index1, index2 := 0, 0
     for {
 
-        // 数组中的所有元素都被排除，接返回另一个数组中第 k 小的元素
+        // 数组中的所有元素都被排除，返回另一个数组中第 k 小的元素
         if index1 == len1 {
             return nums2[index2 + k - 1]
         }
@@ -54,7 +54,7 @@ func getKthElement(nums1 []int, nums2 []int, k int) int {
             return nums1[index1 + k - 1]
         }
 
-        // 如果 k=1，返回两个数组首元素的最小值
+        // 如果 k=1，返回两个数组首个元素的最小值
         if k == 1 {
             return int(math.Min(float64(nums1[index1]), float64(nums2[index2])))
         }
@@ -63,7 +63,7 @@ func getKthElement(nums1 []int, nums2 []int, k int) int {
         newIndex1 := int(math.Min(float64(index1 + half), float64(len1))) - 1
         newIndex2 := int(math.Min(float64(index2 + half), float64(len2))) - 1
         if nums1[newIndex1] <= nums2[newIndex2] {
-            // 排除了元素后，k 减少
+            // 排除了元素后，k 减少排除元素的个数
             k -= newIndex1 - index1 + 1
             // 记录排除元素后数组的起始下标
             index1 = newIndex1 + 1
