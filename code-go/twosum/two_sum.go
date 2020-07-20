@@ -14,7 +14,7 @@ import "fmt"
 func twoSum(nums []int, target int) []int {
     var indexes []int
 
-    // 时间复杂度 O((n^2-n)/2)
+    // 时间复杂度 O(n^2), 空间复杂度 O(1)
     /*for i := 0; i < len(nums) - 1; i++ {
         for j := i + 1; j < len(nums); j++ {
             if nums[i] + nums[j] == target {
@@ -24,7 +24,7 @@ func twoSum(nums []int, target int) []int {
         }
     }*/
 
-    // 时间复杂度 O(n)
+    // 时间复杂度 O(n), 空间复杂度 O(n)
     numMap := make(map[int]int)
     for i, v := range nums {
         // 计算补数

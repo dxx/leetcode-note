@@ -21,6 +21,7 @@ public class TwoSum {
     public static int[] towSum(int[] nums, int target) {
         int[] indexes = new int[2];
         Map<Integer, Integer> numMap = new HashMap<>();
+        // 时间复杂度 O(n), 空间复杂度 O(n)
         for (int i = 0; i < nums.length; i++) {
             // 计算补数
             int n = target - nums[i];
