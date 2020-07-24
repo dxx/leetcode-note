@@ -20,37 +20,54 @@ import "fmt"
 // 输出: 28
 
 func uniquePaths(m int, n int) int {
+    //row, col := n, m
+    //// 用来保存原数组从起点开始到对应点的路径数目
+    //paths := make([][]int, row)
+    //for i := 0; i < len(paths); i++ {
+    //  paths[i] = make([]int, col)
+    //}
+    //// 起始点 0,0
+    //startX, startY := 0, 0
+    //
+    //// 第一列所有点的路径数目
+    //for i := startY; i < row; i++ {
+    //  paths[i][0] = 1
+    //}
+    //
+    //// 第一行所有点的路径数目
+    //for j := startX; j < col; j++ {
+    //  paths[0][j] = 1
+    //}
+    //
+    //// 其它点的路径数目等于上边和左边点的路径数目之和
+    //for i := startY + 1; i < row; i++ {
+    //  for j := startX + 1; j < col; j++ {
+    //      paths[i][j] = paths[i - 1][j] + paths[i][j - 1]
+    //  }
+    //}
+    //// 返回最后一个点的路径数目
+    //return paths[row - 1][col - 1]
+
     row, col := n, m
-    // 用来保存原数组从起点开始到对应点的路径数目
-    pathSums := make([][]int, row)
-    for i := 0; i < len(pathSums); i++ {
-        pathSums[i] = make([]int, col)
+
+    // 使用一维数组代替二维数组，节省空间
+    paths := make([]int, col)
+    // 初始化为 1
+    for i := 0; i < len(paths); i++ {
+       paths[i] = 1
     }
+
     // 起始点 0,0
     startX, startY := 0, 0
-    // 起点路径数目为 1
-    pathSums[startY][startX] = 1
 
-    // 第一列所有点的路径数目
     for i := startY + 1; i < row; i++ {
-        // 等于上一个点的路径数目
-        pathSums[i][0] = pathSums[i - 1][0]
+       for j := startX + 1; j < col; j++ {
+           // paths 滑动数组
+           paths[j] += paths[j - 1]
+       }
     }
-
-    // 第一行所有点的路径数目
-    for j := startX + 1; j < col; j++ {
-        // 等于前一个点的路径数目
-        pathSums[0][j] = pathSums[0][j - 1]
-    }
-
-    // 其它点的路径数目等于上边和左边点的路径数目之和
-    for i := startY + 1; i < row; i++ {
-        for j := startX + 1; j < col; j++ {
-            pathSums[i][j] = pathSums[i - 1][j] + pathSums[i][j - 1]
-        }
-    }
-    // 返回最后一个点的路径数目
-    return pathSums[row - 1][col - 1]
+    // 返回最后的路径数目
+    return paths[col - 1]
 }
 
 func main() {

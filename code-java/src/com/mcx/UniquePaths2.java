@@ -32,64 +32,30 @@ public class UniquePaths2 {
 
         int row = obstacleGrid.length, col = obstacleGrid[0].length;
 
-        // 第一个点和最后一个点有障碍物
-        if (obstacleGrid[0][0] == 1 || obstacleGrid[row - 1][col - 1] == 1) {
-            return 0;
-        }
-
-        // 用来保存原数组从起点开始到对应点的路径数目
-        int[][] pathSums = new int[row][col];
+        // 使用一维数组代替二维数组，节省空间
+        int[] paths = new int[col];
 
         // 起始点 0,0
         int startX = 0, startY = 0;
-        // 起点路径数目为 1
-        pathSums[startY][startX] = 1;
+        // 第一个点初始化为 1
+        paths[startY] = 1;
 
-        // 第一列所有点的路径数目
-        for (int i = startY + 1; i < row; i++) {
-            // 上一个点有障碍物时，不通，数目为0
-            if (obstacleGrid[i - 1][0] == 1) {
-                pathSums[i][0] = 0;
-                continue;
-            }
-            // 等于上一个点的路径数目
-            pathSums[i][0] = pathSums[i - 1][0];
-        }
 
-        // 第一行所有点的路径数目
-        for (int j = startX + 1; j < col; j++) {
-            // 前一个点有障碍物时，不通，数目为0
-            if (obstacleGrid[0][j - 1] == 1) {
-                pathSums[0][j] = 0;
-                continue;
-            }
-            // 等于前一个点的路径数目
-            pathSums[0][j] = pathSums[0][j - 1];
-        }
-
-        // 其它点的路径数目等于上边和左边点的路径数目之和
-        for (int i = startY + 1; i < row; i++) {
-            for (int j = startX + 1; j < col; j++) {
-                // 上边和左边同时有障碍物，不通，数目为0
-                if (obstacleGrid[i - 1][j] == 1 && obstacleGrid[i][j - 1] == 1) {
-                    pathSums[i][j] = 0;
+        for (int i = startY ; i < row; i++) {
+            for (int j = startX; j < col; j++) {
+                // 有障碍物，当前点的路径数目为 0
+                if (obstacleGrid[i][j] == 1) {
+                    paths[j] = 0;
                     continue;
                 }
-                // 上边有障碍物，时只能走左边
-                if (obstacleGrid[i - 1][j] == 1) {
-                    pathSums[i][j] = pathSums[i][j - 1];
-                    continue;
+                if (j - 1 >= 0) {
+                    // paths 滑动数组
+                    paths[j] += paths[j - 1];
                 }
-                // 左边有障碍物，时只能走右边
-                if (obstacleGrid[i][j - 1] == 1) {
-                    pathSums[i][j] = pathSums[i - 1][j];
-                    continue;
-                }
-                pathSums[i][j] = pathSums[i - 1][j] + pathSums[i][j - 1];
             }
         }
-        // 返回最后一个点的路径数目
-        return pathSums[row - 1][col - 1];
+        // 返回最后的路径数目
+        return paths[col - 1];
     }
 
     public static void main(String[] args) {

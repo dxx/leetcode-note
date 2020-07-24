@@ -1,5 +1,7 @@
 package com.mcx;
 
+import java.util.Arrays;
+
 /**
  * Created by mcx on 2020-07-23.
  *
@@ -24,34 +26,23 @@ public class UniquePaths {
 
     public static int uniquePaths(int m, int n) {
         int row = n, col  = m;
-        // 用来保存原数组从起点开始到对应点的路径数目
-        int[][] pathSums = new int[row][col];
+
+        // 使用一维数组代替二维数组，节省空间
+        int[] paths = new int[col];
+        // 初始化为 1
+        Arrays.fill(paths, 1);
 
         // 起始点 0,0
         int startX = 0, startY = 0;
-        // 起点路径数目为 1
-        pathSums[startY][startX] = 1;
 
-        // 第一列所有点的路径数目
-        for (int i = startY + 1; i < row; i++) {
-            // 等于上一个点的路径数目
-            pathSums[i][0] = pathSums[i - 1][0];
-        }
-
-        // 第一行所有点的路径数目
-        for (int j = startX + 1; j < col; j++) {
-            // 等于前一个点的路径数目
-            pathSums[0][j] = pathSums[0][j - 1];
-        }
-
-        // 其它点的路径数目等于上边和左边点的路径数目之和
         for (int i = startY + 1; i < row; i++) {
             for (int j = startX + 1; j < col; j++) {
-                pathSums[i][j] = pathSums[i - 1][j] + pathSums[i][j - 1];
+                // paths 滑动数组
+                paths[j] += paths[j - 1];
             }
         }
-        // 返回最后一个点的路径数目
-        return pathSums[row - 1][col - 1];
+        // 返回最后的路径数目
+        return paths[col - 1];
     }
 
     public static void main(String[] args) {
