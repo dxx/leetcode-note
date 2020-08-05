@@ -43,7 +43,7 @@ func reverseKGroup(head *ListNode, k int) *ListNode {
     return reverseNode.Next
 }
 
-// 给定起始节点和结束节点翻转链表，返回新的头结节点
+// 给定起始节点和结束节点翻转链表，返回新的头节点
 func reverse(first *ListNode, last *ListNode) *ListNode {
     reverseNode := &ListNode{}
     temp := first
