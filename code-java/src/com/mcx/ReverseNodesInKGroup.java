@@ -51,7 +51,7 @@ public class ReverseNodesInKGroup {
     }
 
     /**
-     * 给定起始节点和结束节点翻转链表，返回新的头节点
+     * 给定起始节点和结束节点翻转链表，返回新的起始节点
      */
     private static ListNode reverse(ListNode first, ListNode last) {
         ListNode reverseNode = new ListNode(0);
