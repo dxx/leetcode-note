@@ -20,7 +20,6 @@ import java.util.Stack;
  *     2
  *    /
  *   3
- * //
  * 输出: [1,2,3]
  */
 public class BinaryTreePreorderTraversal {

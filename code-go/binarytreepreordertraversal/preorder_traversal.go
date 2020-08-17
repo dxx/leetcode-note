@@ -14,7 +14,6 @@ import "fmt"
 //     2
 //    /
 //   3
-//
 // 输出: [1,2,3]
 
 type TreeNode struct {
@@ -31,14 +30,14 @@ func preorderTraversal(root *TreeNode) []int {
 }
 
 // 非递归前序遍历
-func preorderNoRecursion(root *TreeNode) []int {
+func preorderNoRecursion(node *TreeNode) []int {
     var stack []*TreeNode
     output := make([]int, 0)
-    if root == nil {
+    if node == nil {
         return output
     }
     // 将当前节点压入栈
-    stack = append(stack, root)
+    stack = append(stack, node)
     for len(stack) > 0 {
         // 弹出当前节点
         node := stack[len(stack) - 1]
