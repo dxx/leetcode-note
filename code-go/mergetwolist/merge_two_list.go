@@ -29,7 +29,7 @@ func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
             appendNode = node1
             // 左边当前链表节点后移
             node1 = node1.Next
-        } else if node1.Val > node2.Val { // 判断左边链表节点是大于右边链表节点
+        } else { // 判断左边链表节点是大于右边链表节点
             appendNode = node2
             // 右边当前链表节点后移
             node2 = node2.Next
