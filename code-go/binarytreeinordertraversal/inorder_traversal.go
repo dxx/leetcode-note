@@ -5,6 +5,8 @@ import "fmt"
 // 二叉树的中序遍历
 // 给定一个二叉树，返回它的中序遍历。
 
+// 进阶: 递归算法很简单，你可以通过迭代算法完成吗？
+
 // 示例
 // 输入: [1,null,2,3]
 //   1
@@ -27,6 +29,7 @@ func inorderTraversal(root *TreeNode) []int {
     // return inorderRecursion(root)
 }
 
+// 非递归中序遍历
 func inorderNoRecursion(node *TreeNode) []int {
     var stack []*TreeNode
     output := make([]int, 0)
@@ -65,6 +68,7 @@ func inorderNoRecursion(node *TreeNode) []int {
     return output
 }
 
+// 递归中序遍历
 func inorderRecursion(root *TreeNode) []int {
     if root == nil {
         return []int{}
