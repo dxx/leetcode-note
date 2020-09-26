@@ -31,7 +31,7 @@ func threeSum(nums []int) [][]int {
         target := -nums[i]
         left := i + 1
         right := n - 1
-        // 从剩下的数组中寻找两个数之和等于 target 的两个元素
+        // 从剩下的数组中寻找所有两个数之和等于 target 的两个元素
         for left < right {
             leftValue := nums[left]
             rightValue := nums[right]

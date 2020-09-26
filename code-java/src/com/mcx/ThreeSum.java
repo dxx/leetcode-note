@@ -35,7 +35,7 @@ public class ThreeSum {
             int target = -nums[i];
             int left = i + 1;
             int right = n - 1;
-            // 从剩下的数组中寻找两个数之和等于 target 的两个元素
+            // 从剩下的数组中寻找所有两个数之和等于 target 的两个元素
             while (left < right) {
                 int leftValue = nums[left];
                 int rightValue = nums[right];
