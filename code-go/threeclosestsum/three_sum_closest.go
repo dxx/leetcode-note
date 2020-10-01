@@ -42,6 +42,7 @@ func threeSumClosest(nums []int, target int) int {
             if abs(sum - target) < abs(bestSum - target) {
                 bestSum = sum
             }
+
             // 和小于目标值，从右边寻找下一个较大的值
             if sum < target {
                 left++
@@ -74,6 +75,6 @@ func main() {
     target := 1
     fmt.Printf("nums = %v, target = %v\n", nums, target)
 
-    results := threeSumClosest(nums, target)
-    fmt.Println(results)
+    sum := threeSumClosest(nums, target)
+    fmt.Println(sum)
 }
