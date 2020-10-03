@@ -33,7 +33,7 @@ func twoSum2(numbers []int, target int) []int {
             left++
             continue
         }
-        // 和大于目标子，从左边寻找下一个较小的值
+        // 和大于目标值，从左边寻找下一个较小的值
         right--
     }
 
