@@ -37,6 +37,7 @@ func fourSum(nums []int, target int) [][]int {
 
 // 计算 n 个数之和
 func nSum(nums []int, start, end, target, n int, records []int) {
+    recordLen := len(records)
     if n <= 2 {
         // 计算两数之和
         results := twoSum(nums, start, end, target)
@@ -44,31 +45,30 @@ func nSum(nums []int, start, end, target, n int, records []int) {
         if len(results) > 0 {
             // 循环遍历结果, 将结果添加到最后的结果中
             for i := 0; i < len(results);i++ {
-                records[2] = results[i][0]
-                records[3] = results[i][1]
+                records[recordLen - 2] = results[i][0]
+                records[recordLen - 1] = results[i][1]
                 res = append(res, append([]int{}, records...))
             }
         }
         return
     }
-    recordsLen := len(records)
     i := start
     for ; i <= end; i++ {
         // 如果元素重复, 跳过
-        if nums[i]  == records[recordsLen - n] {
+        if nums[i]  == records[recordLen - n] {
             continue
         }
 
         // 修改当前第 n 个数
-        records[recordsLen - n] = nums[i]
+        records[recordLen - n] = nums[i]
         if i + 1 < end {
             // 继续计算第 n - 1 个数之和
             nSum(nums, i + 1, end, target - nums[i], n - 1, records)
         }
 
         // 表示下一次重新计算 n 数之和, 将数组元素重置
-        if n == recordsLen {
-            for j := 1; j < recordsLen; j++ {
+        if n == recordLen {
+            for j := 1; j < recordLen; j++ {
                 records[j] = math.MinInt32
             }
         }
@@ -84,7 +84,7 @@ func twoSum(nums []int, start, end, target int) [][]int {
         leftVal := nums[left]
         rightVal := nums[right]
         sum = leftVal + rightVal
-        // 如果相等，将索引放入切片，跳出循环
+        // 如果相等，将元素放入切片
         if sum == target {
             results = append(results, []int{leftVal, rightVal})
 
