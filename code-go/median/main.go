@@ -1,7 +1,6 @@
 package median
 
 import (
-    "fmt"
     "math"
 )
 
@@ -105,22 +104,4 @@ func mergeSearch(nums1 []int, nums2 []int) float64 {
     }
     // 偶数取最后两个元素的平均值
     return (float64(mergeNums[len(mergeNums) - 2]) + float64(mergeNums[len(mergeNums) - 1])) / 2
-}
-
-func main() {
-    nums1 := []int{1, 3}
-    nums2 := []int{2}
-    median := findMedianSortedArrays(nums1, nums2)
-
-    fmt.Println(nums1)
-    fmt.Println(nums2)
-    fmt.Printf("中位数是 %f\n", median)
-
-    nums1 = []int{1, 2}
-    nums2 = []int{3, 4}
-    median = findMedianSortedArrays(nums1, nums2)
-
-    fmt.Println(nums1)
-    fmt.Println(nums2)
-    fmt.Printf("中位数是 %f\n", median)
 }
