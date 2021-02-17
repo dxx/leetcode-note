@@ -50,7 +50,7 @@ impl Solution {
 }
 
 #[test]
-fn test() {
+fn test_tow_sum() {
     let nums = vec![2, 7, 11, 15];
     let target = 9;
     let result = Solution::two_sum(nums, target);

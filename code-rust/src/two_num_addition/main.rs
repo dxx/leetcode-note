@@ -90,7 +90,7 @@ impl Solution {
 }
 
 #[test]
-fn test() {
+fn test_add_two_numbers() {
     let mut l1 = Some(Box::new(ListNode::new(2)));
     let mut node1 = Some(Box::new(ListNode::new(4)));
     let node2 = Some(Box::new(ListNode::new(3)));
