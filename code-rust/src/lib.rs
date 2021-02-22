@@ -12,3 +12,6 @@ mod median;
 
 /// #5 最长回文子串
 mod longest_palindrome;
+
+/// #7 整数反转
+mod num_reverse;
