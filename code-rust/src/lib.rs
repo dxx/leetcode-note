@@ -15,3 +15,6 @@ mod longest_palindrome;
 
 /// #7 整数反转
 mod num_reverse;
+
+/// #9 回文数
+mod palindrome_num;
