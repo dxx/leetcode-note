@@ -18,3 +18,6 @@ mod num_reverse;
 
 /// #9 回文数
 mod palindrome_num;
+
+/// #15 三数之和
+mod three_sum;
