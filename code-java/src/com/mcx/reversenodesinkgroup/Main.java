@@ -25,44 +25,38 @@ public class Main {
     }
 
     public static ListNode reverseKGroup(ListNode head, int k) {
-        ListNode reverseNode = new ListNode(0);
-        ListNode newLastNode = reverseNode;
-        ListNode firstNode = head, tempNode = head;
-        int i = 1;
-        while (tempNode != null) {
-            ListNode next = tempNode.next;
-            // 遍历指定个数节点开始翻转
-            if (i % k == 0) {
-                // 翻转, 返回新的头结点, 然后拼接在新的节点后
-                newLastNode.next = reverse(firstNode, tempNode);
-                // 修改新链表最后一个节点
-                newLastNode = firstNode;
-
-                // 记录下一次要翻转的起始结点
-                firstNode = next;
+        ListNode tail = head;
+        // 寻找从 head 节点开始的第 k 个节点的下一个节点
+        for (int i = 0; i < k; i++) {
+            // 不足 k 个节点不翻转
+            if (tail == null) {
+                return head;
             }
-
-            i++;
-            tempNode = next;
+            tail = tail.next;
         }
-        return reverseNode.next;
+        // 翻转 head 节点，不翻转 tail
+        ListNode nextHead = reverse(head, tail);
+        // 递归翻转，连接新的头结点
+        head.next = reverseKGroup(tail, k);
+        return nextHead;
     }
 
     /**
-     * 给定起始节点和结束节点翻转链表，返回新的起始节点
+     * 给定起始节点和尾节点翻转链表，返回新的起始节点（不翻转尾节点）
      */
-    private static ListNode reverse(ListNode first, ListNode last) {
-        ListNode reverseNode = new ListNode(0);
-        ListNode temp = first;
-        while (temp != last) {
+    private static ListNode reverse(ListNode head, ListNode tail) {
+        ListNode temp = head;
+        ListNode last = null;
+        while (temp != tail) {
+            // 下一个节点
             ListNode next = temp.next;
-            temp.next = reverseNode.next;
-            reverseNode.next = temp;
+            // 当前节点的下一个节点指向尾节点
+            temp.next = last;
+            // 记录下一个节点
+            last = temp;
             temp = next;
         }
-        first.next = last.next;
-        temp.next = reverseNode.next;
-        return temp;
+        return last;
     }
 
     private static void printListNode(ListNode node) {

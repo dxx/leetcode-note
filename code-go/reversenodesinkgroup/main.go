@@ -19,43 +19,38 @@ type ListNode struct {
     Val int
     Next *ListNode
 }
+
 func reverseKGroup(head *ListNode, k int) *ListNode {
-    reverseNode := &ListNode{}
-    newLastNode := reverseNode
-    firstNode, tempNode := head, head
-    i := 1
-    for tempNode != nil {
-        next := tempNode.Next
-        // 遍历指定个数节点开始翻转
-        if i % k == 0 {
-            // 翻转, 返回新的头结点, 然后拼接在新的节点后
-            newLastNode.Next = reverse(firstNode, tempNode)
-            // 修改新链表最后一个节点
-            newLastNode = firstNode
-
-            // 记录下一次要翻转的起始结点
-            firstNode = next
+    tail := head
+    // 寻找从 head 节点开始的第 k 个节点的下一个节点
+    for i := 0; i < k; i++ {
+        // 不足 k 个节点不翻转
+        if tail == nil {
+            return head
         }
-
-        i++
-        tempNode = next
+        tail = tail.Next
     }
-    return reverseNode.Next
+    // 翻转 head 节点，不翻转 tail
+    nextHead := reverse(head, tail)
+    // 递归翻转，连接新的头结点
+    head.Next = reverseKGroup(tail, k)
+    return nextHead
 }
 
-// 给定起始节点和结束节点翻转链表，返回新的起始节点
-func reverse(first *ListNode, last *ListNode) *ListNode {
-    reverseNode := &ListNode{}
-    temp := first
-    for temp != last {
+// 给定起始节点和尾节点翻转链表，返回新的起始节点（不翻转尾节点）
+func reverse(head *ListNode, tail *ListNode) *ListNode {
+    var last *ListNode
+    temp := head
+    for temp != tail {
+        // 下一个节点
         next := temp.Next
-        temp.Next = reverseNode.Next
-        reverseNode.Next = temp
+        // 当前节点的下一个节点指向尾节点
+        temp.Next = last
+        // 记录下一个节点
+        last = temp
         temp = next
     }
-    first.Next = last.Next
-    temp.Next = reverseNode.Next
-    return temp
+    return last
 }
 
 // 打印链表
