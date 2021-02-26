@@ -24,3 +24,6 @@ mod three_sum;
 
 /// #16 最接近的三数之和
 mod three_closest_sum;
+
+/// #18 四数之和
+mod four_sum;
