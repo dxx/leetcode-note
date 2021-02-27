@@ -27,3 +27,6 @@ mod three_closest_sum;
 
 /// #18 四数之和
 mod four_sum;
+
+/// #19 删除链表的倒数第 N 个结点
+mod remove_nth_from_end;
