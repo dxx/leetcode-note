@@ -33,3 +33,6 @@ mod remove_nth_from_end;
 
 /// #20 有效的括号
 mod valid_parentheses;
+
+/// #21 合并两个有序链表
+mod merge_two_list;
