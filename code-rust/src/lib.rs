@@ -36,3 +36,6 @@ mod valid_parentheses;
 
 /// #21 合并两个有序链表
 mod merge_two_list;
+
+/// #23 合并 K 个升序链表
+mod merge_k_list;
