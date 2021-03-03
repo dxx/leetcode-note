@@ -39,3 +39,6 @@ mod merge_two_list;
 
 /// #23 合并 K 个升序链表
 mod merge_k_list;
+
+/// #24 两两交换链表中的节点
+mod swap_nodes_in_pairs;
