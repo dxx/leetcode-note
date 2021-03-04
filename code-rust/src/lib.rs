@@ -42,3 +42,6 @@ mod merge_k_list;
 
 /// #24 两两交换链表中的节点
 mod swap_nodes_in_pairs;
+
+/// #25 K 个一组翻转链表
+mod reverse_nodes_in_k_group;
