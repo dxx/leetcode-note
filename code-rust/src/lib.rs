@@ -45,3 +45,6 @@ mod swap_nodes_in_pairs;
 
 /// #25 K 个一组翻转链表
 mod reverse_nodes_in_k_group;
+
+/// #35 搜索插入位置
+mod insert_position;
