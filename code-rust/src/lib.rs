@@ -48,3 +48,7 @@ mod reverse_nodes_in_k_group;
 
 /// #35 搜索插入位置
 mod insert_position;
+
+/// #51 N 皇后
+#[path = "queen/nqueen.rs"]
+mod queen;
