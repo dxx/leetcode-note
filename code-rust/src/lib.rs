@@ -52,3 +52,7 @@ mod insert_position;
 /// #51 N 皇后
 #[path = "queen/nqueen.rs"]
 mod queen;
+
+/// #52 N 皇后 2
+#[path = "queen/nqueen2.rs"]
+mod queen2;
