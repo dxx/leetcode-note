@@ -56,3 +56,6 @@ mod queen;
 /// #52 N 皇后 2
 #[path = "queen/nqueen2.rs"]
 mod queen2;
+
+/// #53 最大子序和
+mod maximum_sub_array;
