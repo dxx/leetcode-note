@@ -59,3 +59,7 @@ mod queen2;
 
 /// #53 最大子序和
 mod maximum_sub_array;
+
+/// #62 不通过路径
+#[path = "unique_paths/unique_paths.rs"]
+mod unique_paths;
