@@ -63,3 +63,7 @@ mod maximum_sub_array;
 /// #62 不通过路径
 #[path = "unique_paths/unique_paths.rs"]
 mod unique_paths;
+
+/// #63 不通过路径 2
+#[path = "unique_paths/unique_paths2.rs"]
+mod unique_paths2;
