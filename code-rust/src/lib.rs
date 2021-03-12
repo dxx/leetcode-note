@@ -67,3 +67,6 @@ mod unique_paths;
 /// #63 不通过路径 2
 #[path = "unique_paths/unique_paths2.rs"]
 mod unique_paths2;
+
+/// #64 最小路径和
+mod minimum_path_sum;
