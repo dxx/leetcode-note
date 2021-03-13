@@ -70,3 +70,6 @@ mod unique_paths2;
 
 /// #64 最小路径和
 mod minimum_path_sum;
+
+/// #75 颜色分类
+mod sort_colors;
