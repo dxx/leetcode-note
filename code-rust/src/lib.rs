@@ -73,3 +73,6 @@ mod minimum_path_sum;
 
 /// #75 颜色分类
 mod sort_colors;
+
+/// #76 最小覆盖子串
+mod minimum_window_substring;
