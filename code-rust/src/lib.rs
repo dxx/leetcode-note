@@ -76,3 +76,7 @@ mod sort_colors;
 
 /// #76 最小覆盖子串
 mod minimum_window_substring;
+
+/// #82 删除排序链表中的重复元素 2
+#[path = "remove_duplicates_from_sorted_list/delete_duplicates2.rs"]
+mod remove_duplicates_from_sorted_list2;
