@@ -80,3 +80,7 @@ mod minimum_window_substring;
 /// #82 删除排序链表中的重复元素 2
 #[path = "remove_duplicates_from_sorted_list/delete_duplicates2.rs"]
 mod remove_duplicates_from_sorted_list2;
+
+/// #83 删除排序链表中的重复元素
+#[path = "remove_duplicates_from_sorted_list/delete_duplicates.rs"]
+mod remove_duplicates_from_sorted_list;
