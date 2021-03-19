@@ -84,3 +84,6 @@ mod remove_duplicates_from_sorted_list2;
 /// #83 删除排序链表中的重复元素
 #[path = "remove_duplicates_from_sorted_list/delete_duplicates.rs"]
 mod remove_duplicates_from_sorted_list;
+
+/// #94 二叉树的中序遍历
+mod binary_tree_inorder_traversal;
