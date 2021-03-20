@@ -87,3 +87,6 @@ mod remove_duplicates_from_sorted_list;
 
 /// #94 二叉树的中序遍历
 mod binary_tree_inorder_traversal;
+
+/// #95 不同的二叉搜索树 2
+mod unique_binary_search_tree;
