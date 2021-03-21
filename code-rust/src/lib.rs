@@ -90,3 +90,6 @@ mod binary_tree_inorder_traversal;
 
 /// #95 不同的二叉搜索树 2
 mod unique_binary_search_tree;
+
+/// #98 验证二叉搜索树
+mod validate_binary_search_tree;
