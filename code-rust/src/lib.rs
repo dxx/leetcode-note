@@ -93,3 +93,6 @@ mod unique_binary_search_tree;
 
 /// #98 验证二叉搜索树
 mod validate_binary_search_tree;
+
+/// #100 相同的树
+mod same_tree;
