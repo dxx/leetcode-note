@@ -96,3 +96,6 @@ mod validate_binary_search_tree;
 
 /// #100 相同的树
 mod same_tree;
+
+/// #101 对称二叉树
+mod symmetric_tree;
