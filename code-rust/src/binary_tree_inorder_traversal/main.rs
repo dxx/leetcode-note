@@ -42,7 +42,7 @@ impl Solution {
     /// 非递归中序遍历
     fn inorder_no_recursion(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<i32> {
         let mut stack = Vec::new();
-        let mut output = vec![0; 0];
+        let mut output = Vec::new();
         if root.is_none() {
             return output;
         }
