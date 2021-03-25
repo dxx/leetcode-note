@@ -103,3 +103,6 @@ mod symmetric_tree;
 /// #102 二叉树的层序遍历
 #[path = "binary_tree_level_order_traversal/level_order.rs"]
 mod binary_tree_level_order_traversal;
+
+/// #104 二叉树的最大深度
+mod maximum_depth_of_binary_tree;
