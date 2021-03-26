@@ -106,3 +106,7 @@ mod binary_tree_level_order_traversal;
 
 /// #104 二叉树的最大深度
 mod maximum_depth_of_binary_tree;
+
+/// #107 二叉树的层序遍历 2
+#[path = "binary_tree_level_order_traversal/level_order2.rs"]
+mod binary_tree_level_order_traversal2;
