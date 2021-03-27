@@ -110,3 +110,6 @@ mod maximum_depth_of_binary_tree;
 /// #107 二叉树的层序遍历 2
 #[path = "binary_tree_level_order_traversal/level_order2.rs"]
 mod binary_tree_level_order_traversal2;
+
+/// #108 将有序数组转换为二叉搜索树
+mod convert_sorted_array_to_binary_search_tree;
