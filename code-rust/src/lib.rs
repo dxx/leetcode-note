@@ -116,3 +116,6 @@ mod convert_sorted_array_to_binary_search_tree;
 
 /// #109 有序链表转换二叉搜索树
 mod convert_sorted_list_to_binary_search_tree;
+
+/// #110 平衡二叉树
+mod balanced_binary_tree;
