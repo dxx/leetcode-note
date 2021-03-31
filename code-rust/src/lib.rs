@@ -122,3 +122,6 @@ mod balanced_binary_tree;
 
 /// #111 二叉树的最小深度
 mod minimum_depth_of_binary_tree;
+
+/// #139 单词拆分
+mod word_break;
