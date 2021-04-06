@@ -134,3 +134,6 @@ mod binary_tree_preorder_traversal;
 
 /// #145 二叉树的后序遍历
 mod binary_tree_postorder_traversal;
+
+/// #148 排序链表
+mod sort_list;
