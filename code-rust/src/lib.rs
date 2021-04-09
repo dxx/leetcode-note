@@ -140,3 +140,7 @@ mod sort_list;
 
 /// #150 逆波兰表达式求值
 mod reverse_poland;
+
+/// #153 寻找旋转排序数组中的最小值
+#[path = "find_minimum_in_rotated_sorted_array/find_min.rs"]
+mod find_minimum_in_rotated_sorted_array;
