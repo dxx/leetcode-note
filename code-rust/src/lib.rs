@@ -144,3 +144,7 @@ mod reverse_poland;
 /// #153 寻找旋转排序数组中的最小值
 #[path = "find_minimum_in_rotated_sorted_array/find_min.rs"]
 mod find_minimum_in_rotated_sorted_array;
+
+/// #154 寻找旋转排序数组中的最小值 2
+#[path = "find_minimum_in_rotated_sorted_array/find_min2.rs"]
+mod find_minimum_in_rotated_sorted_array2;
