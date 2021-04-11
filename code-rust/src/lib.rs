@@ -1,4 +1,5 @@
 /// #1 两数之和
+#[path = "two_sum/two_sum.rs"]
 mod two_sum;
 
 /// #2 两数相加
@@ -148,3 +149,7 @@ mod find_minimum_in_rotated_sorted_array;
 /// #154 寻找旋转排序数组中的最小值 2
 #[path = "find_minimum_in_rotated_sorted_array/find_min2.rs"]
 mod find_minimum_in_rotated_sorted_array2;
+
+/// #167 两数之和 2
+#[path = "two_sum/two_sum2.rs"]
+mod two_sum2;
