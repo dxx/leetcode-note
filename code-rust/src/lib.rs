@@ -153,3 +153,6 @@ mod find_minimum_in_rotated_sorted_array2;
 /// #167 两数之和 2
 #[path = "two_sum/two_sum2.rs"]
 mod two_sum2;
+
+/// #206 反转链表
+mod reverse_linked_list;
