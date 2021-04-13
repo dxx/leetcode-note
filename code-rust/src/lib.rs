@@ -156,3 +156,6 @@ mod two_sum2;
 
 /// #206 反转链表
 mod reverse_linked_list;
+
+/// #343 整数拆分
+mod integer_break;
