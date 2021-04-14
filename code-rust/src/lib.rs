@@ -159,3 +159,6 @@ mod reverse_linked_list;
 
 /// #343 整数拆分
 mod integer_break;
+
+/// #416 分割等和子集
+mod partition_equal_sub_set_sum;
